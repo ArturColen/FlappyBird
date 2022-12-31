@@ -30,7 +30,7 @@ class Bird:
     SPEED_ROTATION = 20
     ANIMATION_TIME = 5
 
-    # Function for setting the attributes of the bird
+    # Set the bird attributes
     def __init__(self, x, y):
         self.x = x
         self.y = y
@@ -41,13 +41,13 @@ class Bird:
         self.image_count = 0
         self.image = self.IMAGES[0]
 
-    # Function of the bird jump
+    # Set the bird jump
     def jump(self):
         self.speed = -10.5
         self.time = 0
         self.height = self.y
 
-    # Function of the bird movement
+    # Set the bird movement
     def move(self):
         # Calculate the displacement
         self.time += 1
@@ -69,9 +69,8 @@ class Bird:
             if self.angle > -90:
                 self.angle -= self.SPEED_ROTATION
 
-    # Function for draw the bird
+    # Draw the bird
     def draw(self, screen):
-        # Define which bird image to use
         self.image_count += 1
 
         if self.image_count < self.ANIMATION_TIME:
@@ -97,7 +96,7 @@ class Bird:
         rectangle = rotated_image.get_rect(center=pos_center_image)
         screen.blit(rotated_image, rectangle.topleft)
 
-    # Function to catch the bird's mask
+    # Catch the bird's mask
     def get_mask(self):
         return pygame.mask.from_surface(self.image)
 
@@ -106,7 +105,7 @@ class Pipe:
     DISTANCE = 200
     SPEED = 5
 
-    # Function for setting the attributes of the pipe
+    # Define the pipe attributes
     def __init__(self, x):
         self.x = x
         self.height = 0
@@ -117,22 +116,22 @@ class Pipe:
         self.passed = False
         self.define_height()
 
-    # Function for set the pipe height
+    # Set the pipe height
     def define_height(self):
         self.height = random.randrange(50, 450)
         self.top_pos = self.height - self.TOP_PIPE.get_height()
         self.base_pos = self.height + self.DISTANCE
 
-    # Function for move the pipe
+    # Move the pipe
     def move(self):
         self.x -= self.SPEED
 
-    # Function for drawing the pipe
+    # Draw the pipe
     def draw(self, screen):
         screen.blit(self.TOP_PIPE, (self.x, self.top_pos))
         screen.blit(self.BASE_PIPE, (self.x, self.base_pos))
 
-    # Function for checking collision between bird and pipe
+    # Check collision between bird and pipe
     def colide(self, bird):
         bird_mask = bird.get_mask()
         top_mask = pygame.mask.from_surface(self.TOP_PIPE)
@@ -155,13 +154,13 @@ class Floor:
     WIDTH = BASE_IMAGE.get_width()
     IMAGE = BASE_IMAGE
 
-    # Function for setting the attributes of the floor
+    # Set the attributes of the floor
     def __init__(self, y):
         self.y = y
         self.x1 = 0
         self.x2 = self.WIDTH
 
-    # Function for moving the floor
+    # Move the floor
     def move(self):
         self.x1 -= self.SPEED
         self.x2 -= self.SPEED
@@ -171,12 +170,12 @@ class Floor:
         if self.x2 + self.WIDTH < 0:
             self.x2 = self.x1 + self.WIDTH
 
-    # Function for drawing the floor
+    # Draw the floor
     def draw(self, screen):
         screen.blit(self.IMAGE, (self.x1, self.y))
         screen.blit(self.IMAGE, (self.x2, self.y))
 
-# Function to draw the game screen
+# Draw the game screen
 def draw_screen(screen, birds, pipes, floor, points):
     screen.blit(BACKGROUND_IMAGE, (0, 0))
     for bird in birds:
@@ -192,7 +191,7 @@ def draw_screen(screen, birds, pipes, floor, points):
     # Update the screen
     pygame.display.update()
 
-# Function to execute the game
+# Execute the game
 def main():
     birds = [Bird(230, 350)]
     floor = Floor(730)
@@ -236,7 +235,7 @@ def main():
             if pipe.x + pipe.TOP_PIPE.get_width() < 0:
                 remove_pipes.append(pipe)
 
-        # Add point when the bird is passing through the pipe
+        # Add point when bird is passing through pipe
         if add_pipe:
             points += 1
             pipes.append(Pipe(600))
