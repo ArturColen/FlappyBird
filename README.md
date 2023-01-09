@@ -1,6 +1,5 @@
 # Flappy Bird game
-
-Project developed through video classes at [HashTag Treinamentos](https://www.hashtagtreinamentos.com) with the purpose of introducing in the world of game creation with Python. 
+Project developed through video classes at [HashTag Treinamentos](https://www.hashtagtreinamentos.com/) with the purpose of introducing in the world of game creation with Python. 
 
 ## 🔨 Project functionality
 The main function of this project is to play the famous Flappy Bird game, in which the goal is to make the bird go through the pipes without touching them, without falling on the ground, and without touching the sky.
