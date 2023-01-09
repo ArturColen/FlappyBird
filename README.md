@@ -7,5 +7,17 @@ The main function of this project is to play the famous Flappy Bird game, in whi
 # 💻 Technologies and techniques used 
 * `Python with Pygame, OS and random:` Develop the game and make it work through user interaction with the computer keyboard
 
-# 📁 Project access
-You can [access the source code](https://github.com/ArturColen/FlappyBird).
+# 📁 Access and execute project
+### **1.** Install [Python](https://www.python.org/) on your computer
+
+### **2.** Clone [this repository](https://github.com/ArturColen/FlappyBird) on your machine
+* Create a folder on your computer for this program
+* Open the `terminal` inside this folder
+* Copy the [URL](https://github.com/ArturColen/FlappyBird.git) from the repository
+* Type `git clone <URL copied>` and press `enter`
+
+### **3.** Still inside the terminal, install the following library:
+* Pygame: `pip install pygame`
+
+### **4.** Run the program from the terminal
+* `python FlappyBird.py`
