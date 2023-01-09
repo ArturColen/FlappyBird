@@ -6,10 +6,10 @@ Project developed through video classes at [HashTag Treinamentos](https://www.ha
 The main function of this project is to play the famous Flappy Bird game, in which the goal is to make the bird go through the pipes without touching them, without falling on the ground, and without touching the sky.
 
 ## 💻 Technologies used 
-* `Python:` programming language
-* `Pygame:` graphical interface of the game
-* `OS:` integrate the code into the files
-* `Random:` Generate random values to position the objects
+* [Python](https://www.python.org/): programming language
+* [Pygame](https://pypi.org/project/pygame/): graphical interface of the game
+* [OS](https://docs.python.org/pt-br/3.7/library/os.html): integrate the code into the files
+* [Random](https://docs.python.org/pt-br/3.7/library/random.html): Generate random values to position the objects
 
 ## 📁 Access and execute project
 ### 1. Install [Python](https://www.python.org/) on your computer
