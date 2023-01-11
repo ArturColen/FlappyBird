@@ -11,7 +11,7 @@ The main function of this project is to play the famous Flappy Bird game, in whi
 * [Random](https://docs.python.org/pt-br/3.7/library/random.html): Generate random values to position the objects
 
 ## 📁 Access and execute project
-### 1. Install [Python](https://www.python.org/) on your computer
+### 1. Install [Python](https://www.python.org/downloads/) on your computer
 
 ### 2. Clone [this repository](https://github.com/ArturColen/FlappyBird) on your machine
 * Create a folder on your computer for this program
