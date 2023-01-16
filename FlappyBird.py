@@ -1,4 +1,3 @@
-# Import libraries
 import pygame
 import os
 import random
