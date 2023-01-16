@@ -8,7 +8,7 @@ The main function of this project is to play the famous Flappy Bird game, in whi
 * [Python](https://docs.python.org/pt-br/3/tutorial/): programming language
 * [Pygame](https://pypi.org/project/pygame/): graphical interface of the game
 * [OS](https://docs.python.org/pt-br/3.7/library/os.html): integrate the code into the files
-* [Random](https://docs.python.org/pt-br/3.7/library/random.html): Generate random values to position the objects
+* [Random](https://docs.python.org/pt-br/3.7/library/random.html): generate random values to position the objects
 
 ## 📁 Access and execute project
 ### 1. Install [Python](https://www.python.org/downloads/) on your computer
