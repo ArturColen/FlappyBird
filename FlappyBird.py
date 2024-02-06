@@ -1,10 +1,10 @@
-import pygame
 import os
-import random
-
 #auto install
 batf='import.bat'
 os.system(batf)
+import pygame
+import random
+
 
 SCREEN_WIDTH = 500
 SCREEN_HEIGHT = 800 
