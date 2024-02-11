@@ -35,16 +35,16 @@ class Bird:
         self.image = self.IMAGES[0]
 
     def jump(self):
-        self.speed = -10.5
+        self.speed = -8.5
         self.time = 0
         self.height = self.y
 
     def move(self):
         self.time += 1
-        displacement = 1.5 * (self.time**2) + self.speed * self.time
+        displacement = 1 * (self.time**2) + self.speed * self.time
 
-        if displacement > 16:
-            displacement = 16
+        if displacement > 7:
+            displacement = 7
         elif displacement < 0:
             displacement -= 2
         
@@ -85,8 +85,8 @@ class Bird:
         return pygame.mask.from_surface(self.image)
 
 class Pipe:
-    DISTANCE = 200
-    SPEED = 5
+    DISTANCE = 250
+    SPEED = 4
 
     def __init__(self, x):
         self.x = x
@@ -171,7 +171,7 @@ def main():
 
     rotating = True
     while rotating:
-        clock.tick(30)
+        clock.tick(60)
 
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
